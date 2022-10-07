@@ -27,7 +27,7 @@ def second_task():
     return keys
 
 
-def third(keys):
+def third_task(keys):
     for key in keys:
         start_time = time()
         i = 0
@@ -36,7 +36,7 @@ def third(keys):
         print(f"\n{i} = {hex(keys[key])}, found in {int((time() - start_time) * 1000)} ms")
 
 
-while 1:
+while True:
     i = option()
     if i == 1:
         first_task()
@@ -46,6 +46,7 @@ while 1:
         exit()
     else:
         try:
-            third(keys)
+            third_task(keys)
         except:
             print("\nKeys need to be generated first (2)\n")
+
